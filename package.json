@@ -1,0 +1,36 @@
+{
+  "name": "operations-toolkit-ai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/copy-onnx-wasm.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/copy-onnx-wasm.mjs",
+    "build": "next build",
+    "prestart": "node scripts/copy-onnx-wasm.mjs",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test:transcript-cleanup": "node --test tests/transcript-cleanup.test.cjs",
+    "test:voice-pipeline": "node --test tests/voice-transcript-pipeline.test.cjs",
+    "test:diagnostic": "node --test tests/diagnostic.test.cjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0",
+    "lucide-react": "^0.468.0",
+    "next": "^14.2.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.21",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2"
+  }
+}
